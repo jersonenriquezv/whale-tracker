@@ -14,6 +14,7 @@ load_dotenv()
 # Import engine and models
 from packages.database.engine import engine, Base
 from packages.database.models.whale_transaction import WhaleTransaction
+from packages.database.models.alert import Alert  # Add this import
 
 async def create_tables():
     try:
@@ -25,7 +26,7 @@ async def create_tables():
         
         print("Tables created successfully!")
         
-        # Verify table exists
+        # Verify tables exist
         async with engine.begin() as conn:
             result = await conn.execute(
                 text("SELECT table_name FROM information_schema.tables WHERE table_schema = 'public'")

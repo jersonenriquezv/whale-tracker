@@ -42,9 +42,9 @@ class OnchainWorker:
             "0x6cc5f688a315f3dc28a7781717a9a798a59fda7b",  # OKX
         }
         
-        # Whale thresholds (realistic values for actual whales)
-        self.whale_threshold_high = Decimal("500")   # ETH 
-        self.whale_threshold_normal = Decimal("200") # ETH 
+        # Whale thresholds (lowered for testing)
+        self.whale_threshold_high = Decimal("1000")    # ETH (lowered for testing)
+        self.whale_threshold_normal = Decimal("500")  # ETH (lowered for testing) 
         
         self.running = False
         self.websocket = None

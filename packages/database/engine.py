@@ -19,7 +19,7 @@ DATABASE_URL = f"postgresql+asyncpg://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTG
 # Database engine
 engine = create_async_engine(
     DATABASE_URL,
-    echo=True,  # This shows the SQL queries in the console
+    echo=False,  # Set to False to reduce SQL query logging
 )
 
 # Session factory
