@@ -3,6 +3,10 @@ asyncio==3.4.3
 aiohttp==3.9.1
 websockets==12.0
 
+# Blockchain
+web3>=6.12.0
+eth-utils>=2.3.0
+
 # Database and ORM
 supabase==2.0.2
 sqlalchemy==2.0.23
